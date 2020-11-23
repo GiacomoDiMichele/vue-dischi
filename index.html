@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="root">
+            <header>
+                <div class="header-container">
+                    <img src="img/spotify.png" alt="">
+                </div>
+            </header>
+            <div class="albums-container">
+                <div v-for="element in lista_album" class="album">
+                    <img :src="element.poster">
+                    <h2>{{ element.title }}</h2>
+                    <span class="author">{{ element.author }}</span>
+                    <span class="year">{{ element.year }}</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>
